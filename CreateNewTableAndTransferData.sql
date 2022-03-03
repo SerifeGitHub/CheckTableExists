@@ -9,4 +9,4 @@ END
 IF OBJECT_ID ('[JobSatisfaction].[dbo].[ExtremeJobSatisfaction]') IS NOT NULL
 INSERT INTO [JobSatisfaction].[dbo].[ExtremeJobSatisfaction] SELECT * FROM [JobSatisfaction].[dbo].[Sheet1$]
 
-SELECT MIN(JobSatisfaction1), MAX(JobSatisfaction1), AVG(JobSatisfaction1) FROM ExtremeJobSatisfaction
+SELECT MIN(JobSatisfaction1) AS MinJobSatisfaction, MAX(JobSatisfaction1) AS MaxJobSatisfaction, AVG(JobSatisfaction1) AS AVGJobSatisfaction FROM ExtremeJobSatisfaction
